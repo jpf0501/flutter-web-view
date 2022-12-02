@@ -34,6 +34,25 @@ class WebViewWrapper extends StatelessWidget {
         title: Text(title),
       ),
       body: const WebViewPage(),
+      bottomNavigationBar: BottomNavigationBar(
+        iconSize: 30,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat),
+            label: 'Messages',
+          ),
+        ],
+      ),
     );
   }
 }
