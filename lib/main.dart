@@ -79,7 +79,8 @@ class WebViewPageState extends State<WebViewPage> {
   @override
   Widget build(BuildContext context) {
     return const WebView(
-      initialUrl: 'https://ssv.vercel.app',
+      initialUrl: 'https://m.facebook.com',
+      javascriptMode: JavascriptMode.unrestricted,
     );
   }
 }
