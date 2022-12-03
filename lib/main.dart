@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Flutter Webview Demo',
       theme: ThemeData(
         primarySwatch: Palette.shadeBlue,
@@ -35,9 +34,10 @@ class WebViewWrapper extends StatelessWidget {
       ),
       body: const WebViewPage(),
       bottomNavigationBar: BottomNavigationBar(
-        iconSize: 30,
-        selectedItemColor: Colors.black,
+        iconSize: 40,
+        selectedItemColor: Palette.shadeBlue,
         unselectedItemColor: Colors.black,
+        type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -50,6 +50,10 @@ class WebViewWrapper extends StatelessWidget {
           BottomNavigationBarItem(
             icon: Icon(Icons.chat),
             label: 'Messages',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.people),
+            label: 'Groups',
           ),
         ],
       ),
